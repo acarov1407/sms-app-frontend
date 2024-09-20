@@ -1,0 +1,1 @@
+export const inputStyles = "px-2 py-1 rounded-md border-gray-200 border";
