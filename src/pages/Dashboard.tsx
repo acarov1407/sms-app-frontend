@@ -7,7 +7,7 @@ import { useUsers } from "../features/user/hooks/useUsers"
 interface Props { }
 function Dashboard({ }: Props) {
 
-  const { users, isLoading, error } = useUsers();
+  const { users, isLoading } = useUsers();
 
 
   return (
