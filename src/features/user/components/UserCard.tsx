@@ -19,7 +19,7 @@ function UserCard({ user, withAction = true }: Props) {
                     alt="user profile picture"
                 />
                 <div>
-                    <p className="text-gray-800 font-semibold">{username}</p>
+                    <p className="text-gray-800 font-semibold capitalize">{username}</p>
                     <p className="text-gray-600 text-sm tracking-wider">{`+${phone}`}</p>
                 </div>
             </div>

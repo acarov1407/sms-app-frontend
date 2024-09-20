@@ -16,6 +16,8 @@ function App() {
       <MyToaster />
       <BrowserRouter>
         <Routes>
+
+          {/* Posible implementacion de autenticacion  */}
           <Route path="/auth">
 
           </Route>
