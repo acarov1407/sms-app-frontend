@@ -1,4 +1,5 @@
 import axiosClient from "../config/axios-client";
+import { handleAxiosError } from "./error";
 import type { User, UserCreate } from "../types/user";
 
 
@@ -20,7 +21,6 @@ export async function createUserAPI(user: UserCreate): Promise<{ id: string }> {
         });
         return response.data;
     } catch (error) {
-        //console.log(error?.response?.data?.message)
-        throw new Error(error?.response?.data?.message?.at(0));
+       handleAxiosError(error);
     }
 }

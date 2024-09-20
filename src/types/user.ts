@@ -2,7 +2,8 @@ export type User = {
     id: string;
     username: string,
     phone: string,
-    photoURL: string
+    photoURL: string,
+    createdAt: number
 }
 
 export type UserCreate = {

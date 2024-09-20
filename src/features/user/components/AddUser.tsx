@@ -20,7 +20,7 @@ function AddUser({ }: Props) {
                 {(handleClose) => (
                     <div>
                         <Title>Creación de usuario</Title>
-                        <UserForm />
+                        <UserForm closeModal={handleClose}/>
                     </div>
                 )}
             </Modal.Content>

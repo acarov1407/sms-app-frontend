@@ -15,7 +15,7 @@ function UserCard({ user, withAction = true }: Props) {
             <div className="flex items-center gap-4 flex-1">
                 <img
                     className="block rounded-full h-10 w-10"
-                    src={photoURL}
+                    src={photoURL || "/default_avatar.png"}
                     alt="user profile picture"
                 />
                 <div>

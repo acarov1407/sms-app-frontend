@@ -9,7 +9,7 @@ import type { User } from "../../../types/user";
 
 interface Props {
     user: User;
- }
+}
 function SendSMS({ user }: Props) {
     return (
         <Modal>
@@ -23,12 +23,15 @@ function SendSMS({ user }: Props) {
             </Modal.Open>
             <Modal.Content id="new-sms">
                 {(handleClose) => (
-                        <div className="min-w-[280px] sm:min-w-[400px]">
-                            <Title>Enviar a</Title>
-                            <UserCard user={user} withAction={false}/>
-                            <SMSForm />
+                    <div className="min-w-[280px] sm:min-w-[400px]">
+                        <Title>Enviar a</Title>
+                        <UserCard user={user} withAction={false} />
+                        <div className="mt-4">
+                            <SMSForm  closeModal={handleClose} user={user}/>
                         </div>
-                    )}
+
+                    </div>
+                )}
             </Modal.Content>
         </Modal>
     )

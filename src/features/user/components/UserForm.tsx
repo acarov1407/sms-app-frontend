@@ -6,9 +6,11 @@ import type { UserCreate } from "../../../types/user";
 import { useForm } from "../../shared/hooks/useForm";
 import { useCreateUser } from "../hooks/useCreateUser";
 
-interface Props { }
-function UserForm({ }: Props) {
+interface Props {
+    closeModal: () => void;
+}
 
+function UserForm({ closeModal }: Props) {
 
     const { values, handleChange, setFieldValue, resetForm } = useForm<UserCreate>({
         username: "",
@@ -20,7 +22,12 @@ function UserForm({ }: Props) {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        createUser(values);
+        createUser(values, {
+            onSuccess: () => {
+                resetForm();
+                closeModal();
+            }
+        });
     }
 
     return (

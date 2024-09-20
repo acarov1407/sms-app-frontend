@@ -1,4 +1,4 @@
-import { getUsersAPI } from "../../../api/userService";
+import { getUsersAPI } from "../../../api/user-service";
 import { useQuery } from "@tanstack/react-query";
 
 export function useUsers() {
